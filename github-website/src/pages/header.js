@@ -1,27 +1,22 @@
 import React from "react";
-import {Link, Outlet} from "react-router-dom"; //npm install react-router-dom
-import "./style/header.css"
-
+import { Link } from "react-router-dom";
+import "./style/header.css";
 
 const Header = () => {
     return (
-        <>
-            <nav>
-                <header>
-                    <div className="navbar">
-                        <Link to="/">Home</Link>
-                        <Link to="/projects">Projects</Link>
-                        <Link to="/about">About</Link>
-                        <Link to="/contact">Contact</Link>
-                    </div>
-                </header>
+        <header className="header">
+            <div className="title">
+                <p className="welcome-text">Welcome to my Website</p>
+                <p className="byline">By Ryan Bain</p>
+            </div>
+            <nav className="navbar">
+                <Link to="/" className="nav-link">Home</Link>
+                <Link to="/projects" className="nav-link">Projects</Link>
+                <Link to="/about" className="nav-link">About</Link>
+                <Link to="/contact" className="nav-link">Contact</Link>
             </nav>
-
-            <Outlet/>
-        </>
+        </header>
     );
-
-}
-
+};
 
 export default Header;
