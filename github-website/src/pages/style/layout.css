@@ -7,11 +7,10 @@
 
 .content {
     flex: 1;
-    padding: 1rem;
-    background-color: #f9f9f9;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .content {
         padding: 0.5rem;
     }

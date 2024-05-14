@@ -5,16 +5,17 @@ import "./style/header.css";
 const Header = () => {
     return (
         <header className="header">
-            <div className="title">
-                <p className="welcome-text">Welcome to my Website</p>
-                <p className="byline">By Ryan Bain</p>
+            <div className="containerH">
+                <div className="logo">
+                    <Link to="https://www.linkedin.com/in/ryanmbain" className="nav-logo">Ryan Bain</Link>
+                </div>
+                <nav className="navbar">
+                    <Link to="/" className="nav-link">Home</Link>
+                    <Link to="/projects" className="nav-link">Projects</Link>
+                    <Link to="/about" className="nav-link">About</Link>
+                    <Link to="/contact" className="nav-link">Contact</Link>
+                </nav>
             </div>
-            <nav className="navbar">
-                <Link to="/" className="nav-link">Home</Link>
-                <Link to="/projects" className="nav-link">Projects</Link>
-                <Link to="/about" className="nav-link">About</Link>
-                <Link to="/contact" className="nav-link">Contact</Link>
-            </nav>
         </header>
     );
 };

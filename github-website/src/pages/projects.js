@@ -1,9 +1,30 @@
-import React from "react";
+import React from 'react';
+
+function LinkButton({href, label}) {
+
+    function handleClick() {
+        window.location.href = href;
+    }
+
+    return (
+        <button
+            onClick={handleClick}
+        >
+            {label}
+        </button>
+    );
+}
 
 const Projects = () => {
     return (
-        <div>
-            <h1>my Projects</h1>
+        <div className="body">
+            <div className="title">
+                <h1>My Projects</h1>
+            </div>
+            <div className="text">
+                <LinkButton href="https://www.linkedin.com/in/ryanmbain/" label="LinkedIn" />
+                <LinkButton href="https://github.com/TheUnholyPear" label="GitHub" />
+            </div>
         </div>
     );
 }
